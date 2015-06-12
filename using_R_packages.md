@@ -4,18 +4,18 @@ You can get a list of the available packages by using:
 'head(rownames(a), 20)'
 
 * Install a package from CRAN
-** 'install.packages("slidify")'
+  install.packages("slidify")'
 
 * Or multiple packages using a Character vector
-** 'install.packages(c("slidify", "ggplot2", "devtools"))'
+  install.packages(c("slidify", "ggplot2", "devtools"))'
 
 * Or from R Studio
-** Tools > Install Packages
+* Tools > Install Packages
 
 ###Installing an R Package from Bioconductor
-'Source("http://bioconductor.org/biocLite.R")'
-'biocLite()'
-'biocLite(c("GenomicFeatures", "AnnotationDbi"))'
+  Source("http://bioconductor.org/biocLite.R")'
+  biocLite()'
+  biocLite(c("GenomicFeatures", "AnnotationDbi"))'
 
 Link: [http://www.bioconductor.org/install]
 
