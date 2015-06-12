@@ -1,14 +1,18 @@
 ##Installing R Packages
 You can get a list of the available packages by using:
-`a = available.packages()`
-`head(rownames(a), 20)`
 
-* Install a package from CRAN
+    a = available.packages()
+    head(rownames(a), 20)
+
+Install a package from CRAN
+
     install.packages("slidify")
-* Or multiple packages using a Character vector
-`install.packages(c("slidify", "ggplot2", "devtools"))`
-* Or from R Studio
-* Tools > Install Packages
+
+Or multiple packages using a Character vector
+
+    install.packages(c("slidify", "ggplot2", "devtools"))
+
+Or from R Studio using _Tools > Install Packages_
 
 ###Installing an R Package from Bioconductor
     Source("http://bioconductor.org/biocLite.R")
