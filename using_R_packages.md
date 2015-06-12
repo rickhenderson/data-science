@@ -25,6 +25,6 @@ After you install all the packages you need, they are not immediately available.
 
 `library(ggplot2)`
 
-After loading a library, use 'search()' to show the list of functions it has available.
+After loading a library, use `search()` to show the list of functions it has available.
 
 If completing other courses or building data applications, you'll need to install Rtools in Windows.
