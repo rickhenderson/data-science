@@ -16,7 +16,33 @@
 
 ###Dealing with Confounders
 ####Randomization and Blocking
+* fix a variable (constant for different groups)
+* stratify
+* otherwise, randomize
 
+####Prediction
+* probability/sampling, training sets, training function
+* prediction vs. infrerence - _prediction_ is more challenging
+  * prediction key quantities:
+    * see slide 19 - false positives etc.
+    * Sensitivity
+    * Specificity
+    * Positive Predictive Value
+    * Negative Predicitive Value
+    * Accuracy
+ * Beware data dredging and **green** jelly beans :)
+   * (http://xkcd.com/882/)
+ 
+###Summary
+* Good experiments
+  * Have replication
+  * Measure variability
+  * Generailze to the problem you care about
+  * Are transparent
+* Prediction is not interference
+  * Both can be important
+* Beware data dredging
+  * dredging through your data until you find _something_ of statistical significance without crafting a hypothesis https://en.wikipedia.org/wiki/Data_dredging
 
 
 
