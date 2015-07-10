@@ -6,18 +6,20 @@
 * print(x) and auto print 
 
 ##Declaring variables
-
-*x <- 3
-*x <- 1:10
-*x <- rnorm(4)
+`
+x <- 3
+x <- 1:10
+x <- rnorm(4)
+`
 
 * Remember: Objects and Attributes. Everything in R is an object.
 
 ## Vectors and Lists
+
 The `c()` function is used to create vectors (concatenate, create)
 `
-*> x <- c(0.5, 0.6)
-*> x <- c("a", "b", "c")
+> x <- c(0.5, 0.6)
+> x <- c("a", "b", "c")
 `
 ###Using the `vector()` function
 `
@@ -45,18 +47,28 @@ Built column wise:
 * Converts a vector into a matrix
 
 ### Column Binding and Row Binding
-*`cbind()` and `rbind()`
-*>x <- 1:3
-*>y <- 10:12
-*>cbind(x, y) (see the results)
-*>rbind(x,y) (see different results)
+`cbind()` and `rbind()`
+>x <- 1:3
+>y <- 10:12
+>cbind(x, y) (see the results)
+>rbind(x,y) (see different results)
 
 ##Factors
 * Used for categorical data. Thought of as a vector of integers where each integer has a label.
-* x <- factor(c("yes", "yes", "no", "yes", "no"))
+* x <- factor(c("yes", "yes", "no", "yes", "no")
 * table(x)
 * unclass(x)
 ** The factors can be ordered using the `levels` argument
 * x <- factor(c("yes", "yes", "no", "yes", "no"), levels = c("yes", "no"))
 * x
-** This is important in linear modelling
+*** This is important in linear modelling
+
+##Missing Values
+* Uses NA or NaN
+* is.na() or is.nan()
+* NA values have a class, but NaN does not.
+
+##Data Frames
+
+A Data Frame is a key _data type_ in R used to store tabular data.
+
