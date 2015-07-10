@@ -6,52 +6,44 @@
 * print(x) and auto print 
 
 ##Declaring variables
-`
-x <- 3
-x <- 1:10
-x <- rnorm(4)
-`
+* `x <- 3`
+* `x <- 1:10`
+* `x <- rnorm(4)`
 
 * Remember: Objects and Attributes. Everything in R is an object.
 
 ## Vectors and Lists
-
 The `c()` function is used to create vectors (concatenate, create)
-`
-> x <- c(0.5, 0.6)
-> x <- c("a", "b", "c")
-`
+* `> x <- c(0.5, 0.6)`
+* `> x <- c("a", "b", "c")`
+
 ###Using the `vector()` function
-`
-> x <- vector("numeric", length = 10)
-> class(x)
-> as.numeric(x)
-> as.logical(x)
-> as.complex(X)
-`
+* > x <- vector("numeric", length = 10)
+* > class(x)
+* > as.numeric(x)
+* > as.logical(x)
+* > as.complex(X)
 ** None of the AS() operators changes x, just displays it.
-`
-> x <- list(1, "a", TRUE, 1+4i)
-`
+* > x <- list(1, "a", TRUE, 1+4i)
+
 ###Matricies
 * Just a vector with dimensions
-> m <- matrix(nrow = 2, ncol = 3)
-> m
-> dim(m)
-> attributes(m)
+* > m <- matrix(nrow = 2, ncol = 3)
+* > m
+* > dim(m)
+* > attributes(m)
 
 Built column wise:
 * > m <- 1:10
-
-> dim(m) <- c(2, 5)
-* Converts a vector into a matrix
+* > dim(m) <- c(2, 5)
+** Converts a vector into a matrix
 
 ### Column Binding and Row Binding
 `cbind()` and `rbind()`
->x <- 1:3
->y <- 10:12
->cbind(x, y) (see the results)
->rbind(x,y) (see different results)
+* >x <- 1:3
+* >y <- 10:12
+* >cbind(x, y) (see the results)
+* >rbind(x,y) (see different results)
 
 ##Factors
 * Used for categorical data. Thought of as a vector of integers where each integer has a label.
@@ -71,4 +63,10 @@ Built column wise:
 ##Data Frames
 
 A Data Frame is a key _data type_ in R used to store tabular data.
+
+* Creating a Frame
+* `x <- data.frame(foo = 1:4, bar = c(T, T, F, F))`
+* `nrow(x)` and `ncol(x)` return number of rows and columns
+
+Try: x <- data.frame(Case = 1:5, Height = c(180.00, 150.2, 101.3, 53.5, 18.2))
 
