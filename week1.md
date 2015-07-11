@@ -109,6 +109,7 @@ Subsetting can be used to get subsets of objects in R.
 - Subsets can be created using logical index as well as numeric indexes
 - `>x[x > "a"]`
 
+### Subsetting Lists
 - x <- list(foo = 1:4, bar = 0.6)
 - x[1]  _returns a list since foo was a list_
 - x[[1]] _returns just the elements_
