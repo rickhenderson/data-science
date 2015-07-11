@@ -106,3 +106,14 @@ Subsetting can be used to get subsets of objects in R.
 - _[_ returns and object of the same class, can be used to select more than one element
 - _[[_ extracts elements of a list or dataframe
 - _$_ extracts elements of a list or dataframe by name
+- Subsets can be created using logical index as well as numeric indexes
+- `>x[x > "a"]`
+
+- x <- list(foo = 1:4, bar = 0.6)
+- x[1]  _returns a list since foo was a list_
+- x[[1]] _returns just the elements_
+- x$bar
+- x$[["bar"]]
+- x["bar"]
+- name = "bar"
+-- x[name]
