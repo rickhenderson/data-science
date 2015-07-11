@@ -137,4 +137,4 @@ Technique: Create a logical `vector` which tells you where the NAs are.
 Show only the rows that have complete cases, ie. no missing values
 - good <- complete.cases(airquality)
 - airquality[good, ][1:6, ]
-- 
+
