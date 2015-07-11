@@ -92,3 +92,17 @@ Objects and elements of objects can have names.
 * `m`
 
 Names can be useful for creating _self-describing_ data.
+
+## Reading Files
+There are a number of functions used to read data from files and techniques to handle very large 
+
+files. Be sure to calculate the amount of RAM required to read in the datafile and check that your 
+
+computer has at least DOUBLE that amount before starting.
+- See other list of functions or make more notes later. -rh-
+
+## Subsetting
+Subsetting can be used to get subsets of objects in R.
+- _[_ returns and object of the same class, can be used to select more than one element
+- _[[_ extracts elements of a list or dataframe
+- _$_ extracts elements of a list or dataframe by name
