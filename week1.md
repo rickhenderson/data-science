@@ -118,3 +118,13 @@ Subsetting can be used to get subsets of objects in R.
 - x["bar"]
 - name = "bar"
 -- x[name]
+
+-- Double bracket [[ operator can be used with computed element names as shown above.
+
+### Subsetting Matricies
+
+### Partial Matches
+Subsetting with partial matches can save a lot of typing. Works with **[[** and **$**
+- `x <- list(aardvark = 1:5)`
+- `x$a`
+- 
