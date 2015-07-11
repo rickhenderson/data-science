@@ -124,7 +124,17 @@ Subsetting can be used to get subsets of objects in R.
 ### Subsetting Matricies
 
 ### Partial Matches
-Subsetting with partial matches can save a lot of typing. Works with **[[** and **$**
+Subsetting with partial matches can save a lot of typing. Works with **[[** and **$**.
 - `x <- list(aardvark = 1:5)`
 - `x$a`
+- 
+### Removing Missing Values
+Technique: Create a logical `vector` which tells you where the NAs are.
+- x <- c(1, 2, NA, 4, NA, 5)
+- bad <- is.NA(x)
+- x[!bad]        _' Returns only the good data!_
+
+Show only the rows that have complete cases, ie. no missing values
+- good <- complete.cases(airquality)
+- airquality[good, ][1:6, ]
 - 
