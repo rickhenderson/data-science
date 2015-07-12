@@ -121,6 +121,7 @@ Subsetting can be used to get subsets of objects in R.
 
 * First 10 elements (a subset): `x[1:10]` ' 1:10 is called an _index vector_
 * There are 4 types of index vectors: logical, positive ints, negative ints, and characters.
+* First 4 rows: `x[1:4, ]`
 * List of only NAs: `x[is.na(x)]`
 * List of NOT NAs: `x[!is.na(x)]` __SUPER IMPORTANT__
 * Non-missing AND greater than 0: `x[!is.na(x) & x > 0]`
