@@ -155,6 +155,8 @@ mean(d$Temp[d$Month == 6])
 # Method: Create a subset of non-missing values for the Ozone Column, subset THAT for the Month condition, 
 #         then calc the Max.
 max(d$Ozone[!is.na(d$Ozone)][d$Month == 5])
+# OR 
+max(d$Ozone[d$Month == 5], na.rm = TRUE)
 ```
 
 - Double bracket [[ operator can be used with computed element names as shown above.
