@@ -6,44 +6,44 @@
 * print(x) and auto print 
 
 ##Declaring variables
-`
+```R
 x <- 3
 x <- 1:10
 x <- rnorm(4)
-`
+```
 
 * Remember: Objects and Attributes. Everything in R is an object.
 
 ## Vectors and Lists
 
 The `c()` function is used to create vectors (concatenate, create)
-`
+```R
 > x <- c(0.5, 0.6)
 > x <- c("a", "b", "c")
-`
+```
 ###Using the `vector()` function
-`
+```R
 > x <- vector("numeric", length = 10)
 > class(x)
 > as.numeric(x)
 > as.logical(x)
 > as.complex(X)
-`
+```
 ** None of the AS() operators changes x, just displays it.
-`
+```R
 > x <- list(1, "a", TRUE, 1+4i)
-`
+```
+
 ###Matricies
 * Just a vector with dimensions
-> m <- matrix(nrow = 2, ncol = 3)
-> m
-> dim(m)
-> attributes(m)
+* > m <- matrix(nrow = 2, ncol = 3)
+* > m
+* > dim(m)
+* > attributes(m)
 
 Built column wise:
 * > m <- 1:10
-
-> dim(m) <- c(2, 5)
+* > dim(m) <- c(2, 5)
 * Converts a vector into a matrix
 
 ### Column Binding and Row Binding
@@ -122,8 +122,11 @@ Subsetting can be used to get subsets of objects in R.
 * First 10 elements (a subset): `x[1:10]` ' 1:10 is called an _index vector_
 * There are 4 types of index vectors: logical, positive ints, negative ints, and characters.
 * List of only NAs: `x[is.na(x)]`
-* List of NOT NAs: `x[!is.na(x)]` __! SUPER IMPORTANT! __
-* 
+* List of NOT NAs: `x[!is.na(x)]` __SUPER IMPORTANT__
+* Non-missing AND greater than 0: `x[!is.na(x) & x > 0]`
+* Get 3rd, 5th, and 7th elments: `x[c(3, 5, 7)]`
+* All _EXCEPT_ 2nd and 10th elements: `x[c(-2, -10)]` or `x[-c(2, 10)]`
+*  
 
 ###Practical Example
 Read in a file called __data.csv__ and find the average of the Ozone column.
@@ -138,10 +141,20 @@ c = ncol(d)
 my_na = is.na(d)
 # Count the number of NAs by adding up the logical vectors (T=1, F=0)
 totNA = sum(my_na)
+# For simple vectors of data, could just store only good values.
+good_d = d[!is.na(d)]
 
 # Show Ozone rows where Ozone value is greater than 50.
 d[d$Ozone > 50, ]
 
+# Calculate the mean Temperature when Month = 6 (June)
+# ie. a subset of the Temp column.
+mean(d$Temp[d$Month == 6])
+
+# Max Ozone for the Month of May 
+# Method: Create a subset of non-missing values for the Ozone Column, subset THAT for the Month condition, 
+#         then calc the Max.
+max(d$Ozone[!is.na(d$Ozone)][d$Month == 5])
 ```
 
 - Double bracket [[ operator can be used with computed element names as shown above.
