@@ -70,7 +70,7 @@ Built column wise:
 
 ##Data Frames
 
-A Data Frame is a key _data type_ in R used to store tabular data.
+A Data Frame is a key __data type__ in R used to store tabular data.
 
 * Creating a Frame
 * `x <- data.frame(foo = 1:4, bar = c(T, T, F, F))`
@@ -103,7 +103,7 @@ computer has at least DOUBLE that amount before starting.
 
 ## Subsetting
 Subsetting can be used to get subsets of objects in R.
-- _[_ returns and object of the same class, can be used to select more than one element
+- _[_ returns an object of the same class, can be used to select more than one element
 - _[[_ extracts elements of a list or dataframe
 - _$_ extracts elements of a list or dataframe by name
 - Subsets can be created using logical index as well as numeric indexes
@@ -119,7 +119,29 @@ Subsetting can be used to get subsets of objects in R.
 - name = "bar"
 -- x[name]
 
--- Double bracket [[ operator can be used with computed element names as shown above.
+* First 10 elements (a subset): `x[1:10]`
+* 
+
+###Practical Example
+Read in a file called __data.csv__ and find the average of the Ozone column.
+```R
+d <- read.csv(data.csv) # Uses comma separator by default. d is now a dataframe.
+# Get the names of the column headings
+names(d)
+# Get and save number of rows and columns (good practice for later...maybe)
+r = nrow(d)
+c = ncol(d)
+# Tip: Create a Boolean (logical) vector containing NA
+my_na = is.na(d)
+# Count the number of NAs by adding up the logical vectors (T=1, F=0)
+totNA = sum(my_na)
+
+# Show Ozone rows where Ozone value is greater than 50.
+d[d$Ozone > 50, ]
+
+```
+
+- Double bracket [[ operator can be used with computed element names as shown above.
 
 ### Subsetting Matricies
 
