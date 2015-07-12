@@ -148,6 +148,9 @@ good_d = d[!is.na(d)]
 # Show Ozone rows where Ozone value is greater than 50.
 d[d$Ozone > 50, ]
 
+# Crazy Stuff
+mean(d[d$Ozone > 31 & d$Temp > 90, ]$Solar.R, na.rm = TRUE)
+
 # Calculate the mean Temperature when Month = 6 (June)
 # ie. a subset of the Temp column.
 mean(d$Temp[d$Month == 6])
