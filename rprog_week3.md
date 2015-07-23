@@ -31,6 +31,28 @@ Anonymous functions are functions that don't have names, and are usually written
 ```
 ### sapply()
 `sapply()` is the same as `lapply()` except it tries to simplify the results. Where possible, __lists__ become __vectors__, __vectors__ where the size of each element is > 1 becomes a __matrix__ and if nothing else can be done, it will just return a __list__.
- - Good details in the __swirl__ tutorial.s
+ - Good details in the __swirl__ tutorials.
+
+### apply()
+Functions `rowMeans()`, `rowSums()`, `colMeans()`, and `colSums()` are optomized versions of the `apply()` function for those special cases.
+ - Look into this more and examine the quartile example.
+### mapply()
+`mapply()` is a multivariate version of apply that applies functions in parallel to **multiple** objects (the arguments).
+Use `str(mapply)` to see how it can be used.
+**Silly Examples:** `mapply(rep, 1:4, 4:1)`
+
+### Vectorizing A Function
+As an example, we'll create a function to generate random noise.
+```R
+  noise <- function(n, mean, sd) {
+    rnorm(n, mean, sd)
+  }
+  
+  > noise(5, 1, 2)
+  ...
+  > noise(1:5, 1:5, 2)
+```
+
+
 
 
