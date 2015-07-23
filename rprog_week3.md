@@ -50,7 +50,19 @@ As an example, we'll create a function to generate random noise.
   
   > noise(5, 1, 2)
   ...
-  > noise(1:5, 1:5, 2)
+  > noise(1:5, 1:5, 2) # Doesn't work, need to vectorize the noise function.
+```
+Using `mapply()` gives us instant vectorization.
+`> mapply(noise, 1:5, 1:5, 2) # gives 5 arguments for n, and 5 for mean, but always same sd.`
+
+### tapply()
+`tapply()` is used to apply a function over subsets of a vector.
+Example: If all my punch data was in a vector, and Left or Right arm was a factor, then I could use `tapply()` to calculate mean etc. of each hand as a group, at once.
+```R
+  x <- c(24,23,30, 34,33,34)
+  f <- gl(2, 3)
+  # f = 1 1 1 2 2 2 
+  tapply(x, f, mean) # Calculates the mean of the two groups.
 ```
 
 
