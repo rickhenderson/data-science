@@ -63,7 +63,13 @@ Example: If all my punch data was in a vector, and Left or Right arm was a facto
   f <- gl(2, 3)
   # f = 1 1 1 2 2 2 
   tapply(x, f, mean) # Calculates the mean of the two groups.
+  # Result:
+  1             2
+  25.6667   33.6667
 ```
+```R
+> tapply(x, f, range)
+# Returns a list of the min and max (returns 2 numbers) for each of the factor groups in x.
 
 
 
