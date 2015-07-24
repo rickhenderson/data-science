@@ -1,28 +1,30 @@
 ##Installing R Packages
 You can get a list of the available packages by using:
-'a = available.packages()'
-'head(rownames(a), 20)'
 
-* Install a package from CRAN
-** 'install.packages("slidify")'
+    a = available.packages()
+    head(rownames(a), 20)
 
-* Or multiple packages using a Character vector
-** 'install.packages(c("slidify", "ggplot2", "devtools"))'
+Install a package from CRAN
 
-* Or from R Studio
-** Tools > Install Packages
+    install.packages("slidify")
+
+Or multiple packages using a Character vector
+
+    install.packages(c("slidify", "ggplot2", "devtools"))
+
+Or from R Studio using _Tools > Install Packages_
 
 ###Installing an R Package from Bioconductor
-'Source("http://bioconductor.org/biocLite.R")'
-'biocLite()'
-'biocLite(c("GenomicFeatures", "AnnotationDbi"))'
+    Source("http://bioconductor.org/biocLite.R")
+    biocLite()
+    biocLite(c("GenomicFeatures", "AnnotationDbi"))
 
 Link: [http://www.bioconductor.org/install]
 
 After you install all the packages you need, they are not immediately available. You need to load them.
 
-'library(ggplot2)'
+`library(ggplot2)`
 
-After loading a library, use 'search()' to show the list of functions it has available.
+After loading a library, use `search()` to show the list of functions it has available.
 
 If completing other courses or building data applications, you'll need to install Rtools in Windows.
