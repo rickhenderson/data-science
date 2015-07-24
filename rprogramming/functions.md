@@ -1,8 +1,8 @@
 #R Programming Function List
 
-vector()
-list()
-c()
+- vector()
+- list()
+- c()
 cbind()
 rbind()
 matrix()
@@ -15,6 +15,7 @@ runif(4) - creates 4 random uniform variables
 lm()
 glm()
 gl() - gl(3, 10) creates 3 groups of 10 elements and numbers them.
+- interaction(f1, f2)
 factor()
 table()
 unclass()
