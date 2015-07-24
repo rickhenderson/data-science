@@ -6,4 +6,4 @@
 - `git commit -m "message"` to commit indexed files to the repository
 - `git push [my url]` will push committed files to GitHub.
 - `git log` to show the list of recent commits, newest at the top by default
-- 'git status` show the working tree status
+- `git status` show the working tree status
