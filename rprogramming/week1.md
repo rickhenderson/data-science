@@ -110,6 +110,8 @@ Subsetting can be used to get subsets of objects in R.
 - `>x[x > "a"]`
 - Show only the data rows where Species column contains "virginica" *FILTERING*
 - - `iris[iris$Species == "virginica", ]`
+- Apply the mean to 4 of the columns in a dataset
+- - `apply(iris[,1:4],2, mean)`
 
 ### Subsetting Lists
 - x <- list(foo = 1:4, bar = 0.6)
