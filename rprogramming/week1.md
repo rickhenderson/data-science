@@ -108,6 +108,8 @@ Subsetting can be used to get subsets of objects in R.
 - _$_ extracts elements of a list or dataframe by name
 - Subsets can be created using logical index as well as numeric indexes
 - `>x[x > "a"]`
+- Show only the data rows where Species column contains "virginica" *FILTERING*
+- - `iris[iris$Species == "virginica", ]`
 
 ### Subsetting Lists
 - x <- list(foo = 1:4, bar = 0.6)
