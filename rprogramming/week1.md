@@ -112,6 +112,7 @@ Subsetting can be used to get subsets of objects in R.
 - - `iris[iris$Species == "virginica", ]`
 - Apply the mean to 4 of the columns in a dataset
 - - `apply(iris[,1:4],2, mean)`
+- Note that column names or column numbers may be used, as well as sequences (1:4) for columns 1 - 4
 
 ### Subsetting Lists
 - x <- list(foo = 1:4, bar = 0.6)
