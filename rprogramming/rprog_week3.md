@@ -71,6 +71,17 @@ Example: If all my punch data was in a vector, and Left or Right arm was a facto
 > tapply(x, f, range)
 # Returns a list of the min and max (returns 2 numbers) for each of the factor groups in x.
 
+## Other Loops
+Not covered in the course but probably you'll probably try to use them:
+```R
+ if (outcome == "heart attack") {
+          reqrd_col = 11
+     } else if (outcome == "heart failure") {
+          reqrd_col = 17
+     } else if (outcome == "pneumonia") {
+          reqrd_col = 23
+     }
+```
 
 
 
