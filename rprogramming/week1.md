@@ -166,6 +166,16 @@ mean(d$Temp[d$Month == 6])
 max(d$Ozone[!is.na(d$Ozone)][d$Month == 5])
 # OR 
 max(d$Ozone[d$Month == 5], na.rm = TRUE)
+
+# Other useful examples
+# Check to see if outcome is valid
+     if (!(outcome %in% valid_outcomes)) { #or use stopifnot
+          stop("invalid outcome")
+     }
+     
+     # Subset the list to the required state (filtering, other columns are retained)
+     df <- hospital_data[hospital_data$State == state, ]
+
 ```
 
 - Double bracket [[ operator can be used with computed element names as shown above.
