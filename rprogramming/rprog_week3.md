@@ -36,6 +36,7 @@ Anonymous functions are functions that don't have names, and are usually written
 ### apply()
 Functions `rowMeans()`, `rowSums()`, `colMeans()`, and `colSums()` are optomized versions of the `apply()` function for those special cases.
  - Look into this more and examine the quartile example.
+
 ### mapply()
 `mapply()` is a multivariate version of apply that applies functions in parallel to **multiple** objects (the arguments).
 Use `str(mapply)` to see how it can be used.
@@ -83,6 +84,7 @@ Not covered in the course but probably you'll probably try to use them:
           reqrd_col = 23
      }
 ```
+Can also use the `switch()` function.
 
 
 
