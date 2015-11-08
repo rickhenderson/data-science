@@ -5,7 +5,6 @@
 - `git remote add origin https://github.com/rickhenderson/rover.git` for new repository (empty on GitHub, but files on comp)
 - `git add -A` for adding all files to the index
 - `git commit -m "message"` to commit indexed files to the repository
-- 
 - `git push -u origin master`
 - `git push [my url]` will push committed files to GitHub.
 - `git log` to show the list of recent commits, newest at the top by default
