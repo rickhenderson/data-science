@@ -43,31 +43,31 @@
 - invisible(_[return value]_)
 - write.table()
 - writeLines()
--dump
--dput(_dataframe_, _file="_dataframe.R_")
--sapply(file, class)
--lapply(df, function
--save
--identical()
--rep(NA, 1000)
--sd(mydata, na.rm=TRUE)
--args()
--lm()
--ls(environment(function))
--get("n", environment(cube))
--formals()
--cat()
--paste("a", "b", sep = ":")
--as.Date("1970-01-01")
--unclass()
--weekdays()
--months()
--quarterS()
--as.POSIXlt()
--as.POSIXct()
--Sys.time()
--strptime()
--length()
+- dump
+- dput(_dataframe_, _file="_dataframe.R_")
+- sapply(file, class)
+- lapply(df, function
+- save
+- identical()
+- rep(NA, 1000)
+- sd(mydata, na.rm=TRUE)
+- args()
+- lm()
+- ls(environment(function))
+- get("n", environment(cube))
+- formals()
+- cat()
+- paste("a", "b", sep = ":")
+- as.Date("1970-01-01")
+- unclass()
+- weekdays()
+- months()
+- quarterS()
+- as.POSIXlt()
+- as.POSIXct()
+- Sys.time()
+- strptime()
+- length()
 
 ###Reading Files
 ```R
@@ -88,13 +88,15 @@ df[, pollutant]
 ```
 
 ###Subsetting Lists
+```
+x <- list(foo = 1:4, bar = 0.6)
+x[1]  _returns a list since foo was a list_
+x[[1]] _returns just the elements_
+x$bar
+x$[["bar"]]
+```
 
--x <- list(foo = 1:4, bar = 0.6)
--x[1]  _returns a list since foo was a list_
--x[[1]] _returns just the elements_
--x$bar
--x$[["bar"]]
--Use Which: day_25 <- df[which(df$Day == 25), ]
+Use Which: `day_25 <- df[which(df$Day == 25), ]`
 
 -x["bar"]
 -name = "bar"
