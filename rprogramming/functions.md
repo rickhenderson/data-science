@@ -11,10 +11,12 @@
 - ?list.files
 - dim()
 - rnorm()
-- runif(4) - creates 4 random uniform variables
+- runif(4)
+  - Creates 4 random uniform variables.
 - lm()
 - glm()
-- gl() - gl(3, 10) creates 3 groups of 10 elements and numbers them.
+- gl()
+  - gl(3, 10)  # Creates 3 groups of 10 elements and numbers them.
 - split()
 - interaction(f1, f2)
 - factor()
@@ -71,27 +73,27 @@
 
 ###Reading Files
 ```R
-file()
-url()
-gzfile()
-bzfile()
-download.file(dataset_url, "datafile.zip")
-unzip("datafile.zip", exdir="data")
-list.files("data")
-str(andy)
-summary(andy)
-names(andy)
-which(andy$Day == 30)
-subset(andy$Weight, andy$Day==30)
-unique(my_vector)
-df[, pollutant]
+- file()
+- url()
+- gzfile()
+- bzfile()
+- download.file(dataset_url, "datafile.zip")
+- unzip("datafile.zip", exdir="data")
+- list.files("data")
+- str(andy)
+- summary(andy)
+- names(andy)
+- which(andy$Day == 30)
+- subset(andy$Weight, andy$Day==30)
+- unique(my_vector)
+- df[, pollutant]
 ```
 
 ###Subsetting Lists
 ```R
 * x <- list(foo = 1:4, bar = 0.6)
-* x[1]  _returns a list since foo was a list_
-* x[[1]] _returns just the elements_
+* x[1]        # returns a list since foo was a list
+* x[[1]]      # returns just the elements
 * x$bar
 * x$[["bar"]]
 * x["bar"]
@@ -99,7 +101,10 @@ df[, pollutant]
 * x[name]
 ```
 
-Use Which: `day_25 <- df[which(df$Day == 25), ]`
+Use Which: 
+```R
+day_25 <- df[which(df$Day == 25), ]
+```
 
 ### Removing NA Values
 
