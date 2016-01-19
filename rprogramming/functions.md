@@ -88,19 +88,18 @@ df[, pollutant]
 ```
 
 ###Subsetting Lists
-```
-x <- list(foo = 1:4, bar = 0.6)
-x[1]  _returns a list since foo was a list_
-x[[1]] _returns just the elements_
-x$bar
-x$[["bar"]]
+```R
+* x <- list(foo = 1:4, bar = 0.6)
+* x[1]  _returns a list since foo was a list_
+* x[[1]] _returns just the elements_
+* x$bar
+* x$[["bar"]]
+* x["bar"]
+* name = "bar"
+* x[name]
 ```
 
 Use Which: `day_25 <- df[which(df$Day == 25), ]`
-
--x["bar"]
--name = "bar"
-  -x[name]
 
 ### Removing NA Values
 
