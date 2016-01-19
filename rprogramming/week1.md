@@ -36,22 +36,27 @@ The `c()` function is used to create vectors (concatenate, create)
 
 ###Matricies
 * Just a vector with dimensions
-* > m <- matrix(nrow = 2, ncol = 3)
-* > m
-* > dim(m)
-* > attributes(m)
-
+```R
+> m <- matrix(nrow = 2, ncol = 3)
+> m
+> dim(m)
+> attributes(m)
+```
 Built column wise:
+```R
 * > m <- 1:10
 * > dim(m) <- c(2, 5)
 * Converts a vector into a matrix
+```
 
 ### Column Binding and Row Binding
+```R
 `cbind()` and `rbind()`
 >x <- 1:3
 >y <- 10:12
 >cbind(x, y) (see the results)
 >rbind(x,y) (see different results)
+```
 
 ##Factors
 * Used for categorical data. Thought of as a vector of integers where each integer has a label.
@@ -72,18 +77,21 @@ Built column wise:
 
 A Data Frame is a key __data type__ in R used to store tabular data.
 
-* Creating a Frame
+Creating a Frame
 * `x <- data.frame(foo = 1:4, bar = c(T, T, F, F))`
 * `nrow(x)` and `ncol(x)` return number of rows and columns
 
-Try: x <- data.frame(Case = 1:5, Height = c(180.00, 150.2, 101.3, 53.5, 18.2))
+Try: `x <- data.frame(Case = 1:5, Height = c(180.00, 150.2, 101.3, 53.5, 18.2))`
 
 ## Names 
+
 Objects and elements of objects can have names.
-* `x <- 1:3`
-* `names(x) <- c("foo", "bar", "norf")`
-* `x`
-* `names(x)`
+```R
+x <- 1:3
+names(x) <- c("foo", "bar", "norf")
+x
+names(x)
+```
 
 * `x <- list(a=1, b=2, c=3)`
 
@@ -107,14 +115,15 @@ Subsetting can be used to get subsets of objects in R.
 - _[[_ extracts elements of a list or dataframe
 - _$_ extracts elements of a list or dataframe by name
 - Subsets can be created using logical index as well as numeric indexes
-- `>x[x > "a"]`
+  - `>x[x > "a"]`
 - Show only the data rows where Species column contains "virginica" *FILTERING*
-- - `iris[iris$Species == "virginica", ]`
+  - `iris[iris$Species == "virginica", ]`
 - Apply the mean to 4 of the columns in a dataset
-- - `apply(iris[,1:4],2, mean)`
+  - `apply(iris[,1:4],2, mean)`
 - Note that column names or column numbers may be used, as well as sequences (1:4) for columns 1 - 4
 
 ### Subsetting Lists
+```R
 - x <- list(foo = 1:4, bar = 0.6)
 - x[1]  _returns a list since foo was a list_
 - x[[1]] _returns just the elements_
@@ -123,6 +132,7 @@ Subsetting can be used to get subsets of objects in R.
 - x["bar"]
 - name = "bar"
 - x[name]
+```
 
 * First 10 elements (a subset): `x[1:10]` ' 1:10 is called an _index vector_
 * There are 4 types of index vectors: logical, positive ints, negative ints, and characters.
@@ -190,13 +200,17 @@ Subsetting with partial matches can save a lot of typing. Works with **[[** and 
 
 ### Removing Missing Values
 Technique: Create a logical `vector` which tells you where the NAs are.
+```R
 - x <- c(1, 2, NA, 4, NA, 5)
 - bad <- is.NA(x)
 - x[!bad]        _' Returns only the good data!_
+```
 
 Show only the rows that have complete cases, ie. no missing values
+```R
 - good <- complete.cases(airquality)
 - airquality[good, ][1:6, ]
+```
 
 ### Vectorized Operations
 Makes code more concise, efficient, and easier to read. Reduces the need for loops.
