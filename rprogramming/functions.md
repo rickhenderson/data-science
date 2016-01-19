@@ -23,9 +23,9 @@
 - is.na()
 - is.nan()
 - read.table(file, header, sep, [colClasses], [nrows], [comment.char], [skip], [stringsAsFactors])
--- Space separated by default.
+  - Space separated by default.
 - read.csv()  
--- Comma separated by default. Header is always true.
+  - Comma separated by default. Header is always true.
 - data.matrix()
 - data.frame()
 - nrow()
