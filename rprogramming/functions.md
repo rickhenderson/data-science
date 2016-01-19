@@ -70,7 +70,7 @@
 -length()
 
 ###Reading Files
-
+```R
 file()
 url()
 gzfile()
@@ -85,7 +85,7 @@ which(andy$Day == 30)
 subset(andy$Weight, andy$Day==30)
 unique(my_vector)
 df[, pollutant]
-
+```
 
 ###Subsetting Lists
 
