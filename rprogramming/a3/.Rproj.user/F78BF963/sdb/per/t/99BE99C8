@@ -1,0 +1,17 @@
+{
+    "contents" : "# Collection of Useful Functions\n# Collected or Written by Rick Henderson\n#\n# Remove all objects from the environment except functions\n# Found on Stack Exchange\n# rmfunc not working yet :)\nrmfunc <- function(){\n     rm(list = setdiff(ls(.GlobalEnv), lsf.str(.GlobalEnv)))\n}\n\nsort_by_columns <- function (data, col1, col2) {\n     # From https://github.com/DanieleP/PA3-tutorial/blob/master/sortcolumns.md\n     # With changes\n     #usage: sorted_data <- sort_by_colmns(df, colnum1, colnum2)\n     orderdata <- data[order(data[, col1], data[, col2], decreasing = FALSE, na.last = NA),]\n     return(orderdata)\n}\n\nsort_by_column <- function (data, col1) {\n     # From https://github.com/DanieleP/PA3-tutorial/blob/master/sortcolumns.md\n     # With changes\n     #usage: sorted_data <- sort_by_colmns(df, colnum1, colnum2)\n     orderdata <- data[order(data[, col1], decreasing = FALSE, na.last = NA),]\n     return(orderdata)\n}\n\n## Subsetting data by column, we get a factor:\n## > class(data[,2])\n## [1] \"factor\"\n## One way to extract a vector from the factor is by subsetting it by its levels.\n## levels(data[,2]) returns a vector of the levels:\n## [1] \"China\" \"UK\"    \"USA\"\n## levels(data[,2])[data[,2]] returns a vector with the content of [data[,2]]\n## [1] \"China\" \"China\" \"USA\"   \"USA\"   \"UK\"    \"UK\"  \n## data[,2] would return a factor, that for our purposes is harder to handle\n## [1] China China USA   USA   UK    UK   \n## Levels: China UK USA\n## SuppressWarnings() stops the warning alerts from R. When we coerce a mixed list of numeric and character\n## into a numeric vector, text becomes automatically NA, but it's a forced coercion and R sends a warning.\n## This is the case of our column 3 and 4, where \"Unknown\" becomes NA.\n## complete.cases() returns the indexes of the rows that don't have any NA. By subsetting the matrix by these\n## indexes we get a data frame with only complete cases.\nsort_by_column_NA <- function(data,column){\n     for (i in 3){\n          data[,i] <- suppressWarnings(as.numeric(levels(data[,i])[data[,i]]))\n     }\n     orderdata <- data[order(data[,column]),]\n     orderdata <- orderdata[complete.cases(orderdata),] \n     return(orderdata)\n}",
+    "created" : 1438398441319.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2442592244",
+    "id" : "99BE99C8",
+    "lastKnownWriteTime" : 1438543075,
+    "path" : "~/rprog/useful.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "type" : "r_source"
+}

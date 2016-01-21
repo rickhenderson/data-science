@@ -1,0 +1,18 @@
+{
+    "contents" : "# Functions for A3\n# RProgramming\n# Hospital Outcomes\n\n# The best function reads hospital data from the computer\n# and determines the hospital with the best outcome.\n# Note: Refer to Tables 11 and 19 in Hospital_Revised_Flatfiles.pdf\n\nbest <- function(state, outcome) {\n     ## Read outcome data\n     hospital_data <- read.csv(\"outcome-of-care-measures.csv\", colClasses = \"character\")\n     \n     # Create a vector of valid outcomes\n     valid_outcomes <- c(\"heart attack\", \"heart failure\", \"pneumonia\")\n     # Position of outcome in vector now matches outcome columns for using match()\n     \n     # Using \"Risk Adjusted Rates\"\n     # Heart Attack - hospital_data[,11]\n     # Heart Failure - hospital_data[,17]\n     # Pneumonia - hospital_data[,23]\n     \n     ## Check that the state and outcome are valid\n     ## Future update: could also use stopifnot(outcome %in% valid_outcomes, state %in% states_list)\n\n     # Get the a unique list of states in the dataset\n     state_list <- unique(hospital_data[,7])\n     \n     # Check to see if given state name is valid\n     if (!(state %in% state_list)) {\n          stop(\"invalid state\")\n     }\n     \n     # Chec to see if outcome is valid\n     if (!(outcome %in% valid_outcomes)) {\n          stop(\"invalid outcome\")\n     }\n     \n     # Subset the list to the required state and outcome AND valid measurement\n     df <- hospital_data[hospital_data$State == state, ] \n\n     # Set a column number for each of the outcomes\n     \n     \n     if (outcome == \"heart attack\") {\n          reqrd_col = 11\n     } else if (outcome == \"heart failure\") {\n          reqrd_col = 17\n     } else if (outcome == \"pneumonia\") {\n          reqrd_col = 23\n     }\n     \n     # If I ever need it again.\n     #min_value = min(as.numeric(df[, reqrd_col]), na.rm=TRUE)       \n     \n     # Sort so the data frame is sorted by outcome, then by hospital name\n     # in the case of ties\n     sorted_data <- sort_by_colmns(df, reqrd_col, 1)\n     \n     ## Return hospital name in that state with the lowest\n     ## 30-day death rate fpr the specified outcome\n    result <- head(sorted_data, 1)\n    \n    return(as.character(result[2]))\n     \n}\n\nsort_by_colmns <- function (data, col1, col2) {\n     # From https://github.com/DanieleP/PA3-tutorial/blob/master/sortcolumns.md\n     # With changes\n     #usage: sorted_data <- sort_by_colmns(df, colnum1, colnum2)\n          orderdata <- data[order(data[, col1], data[, col2], decreasing = FALSE, na.last = NA),]\n     return(orderdata)\n}",
+    "created" : 1438052406067.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1189052948",
+    "id" : "DBAB174B",
+    "lastKnownWriteTime" : 1438399408,
+    "path" : "~/rprog/a3/best.R",
+    "project_path" : "best.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : true,
+    "type" : "r_source"
+}

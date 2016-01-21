@@ -1,0 +1,25 @@
+{
+    "contents" : "",
+    "created" : 1438553085638.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "4D6871AE",
+    "lastKnownWriteTime" : 7011605692497750387,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "p3wr1bmpp7",
+        "caption" : "orderdata",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=orderdata&cache_key=p3wr1bmpp7",
+        "displayedObservations" : 14,
+        "environment" : "",
+        "object" : "orderdata",
+        "totalObservations" : 14,
+        "variables" : 3
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "type" : "r_dataframe"
+}
