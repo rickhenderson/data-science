@@ -5,6 +5,7 @@
 # Based on: http://www.cyclismo.org/tutorial/R/s4Classes.html
 # This is used to represent a perceptron as an S4 class.
 # This works!
+# Jan 21, 2016: TODO Still needs some work to get an output as well as proper instance creation.
 
 Perceptron <- setClass(
   # Set the name for the class.
