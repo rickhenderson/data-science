@@ -1,9 +1,16 @@
 # Week 1 Quiz
 # Get Clean Data
+# Modified: 20160303 - Found message and paste0 to output results.
 
 # Download the Dataset for the Week 1 Quiz, Q1
 fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv"
-#download.file(fileURL, ".\\data\\q1.csv")
+#download.file(fileURL, "./data/q1.csv") # For *Nix
+#download.file(fileURL, ".\\data\\q1.csv") # For Windows
+
+# Just code to make a beep when code is completed.
+#install.packages("beepr")
+#library(beepr)
+#beep()
 
 # Set the date the file was downloaded
 #dateDownloaded <- date()
@@ -29,4 +36,4 @@ allExpensiveHouses <- ans[ans$goodHouseValues == 24, ]
 q1Answer <- length(allExpensiveHouses)
 
 # Display the results
-q1Answer
+message(paste0("The number of houses is ", q1Answer, "."))
