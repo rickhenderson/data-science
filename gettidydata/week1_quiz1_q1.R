@@ -1,9 +1,15 @@
 # Week 1 Quiz
 # Get Clean Data
-# Modified: 20160303 - Found message and paste0 to output results.
+
+# Modified: 20160303 - added check for data dir, added code for Windows vs. *NIX as well as 
+#                      improved text output using message() and paste0()
 
 # Download the Dataset for the Week 1 Quiz, Q1
 fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv"
+
+if (!file.exists("data")) {
+     dir.create("data")
+}
 #download.file(fileURL, "./data/q1.csv") # For *Nix
 #download.file(fileURL, ".\\data\\q1.csv") # For Windows
 
@@ -14,10 +20,10 @@ fileURL <- "https://d396qusza40orc.cloudfront.net/getdata%2Fdata%2Fss06hid.csv"
 
 # Set the date the file was downloaded
 #dateDownloaded <- date()
-# Wed Mar 02 22:22:12 2016
+originalDate <-"Wed Mar 02 22:22:12 2016"
 
 # Read in the file as a data frame
-df <- read.csv("data//q1.csv")
+df <- read.csv("data/q1.csv")
 
 # Narrow the data down to one column / variable (the VAL column for house values)
 houseValues <- df$VAL
@@ -36,4 +42,6 @@ allExpensiveHouses <- ans[ans$goodHouseValues == 24, ]
 q1Answer <- length(allExpensiveHouses)
 
 # Display the results
-message(paste0("The number of houses is ", q1Answer, "."))
+message(paste0("The file was downloaded ", originalDate, "."))
+message(paste0("The number of houses in category 24 is ", q1Answer, "."))
+
