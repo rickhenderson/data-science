@@ -1,24 +1,27 @@
-# readJSON.R
-# Read JSON Data into R
-# Example from Week 1 Slides on XML of the Data Science Course At John Hopkins
-# Entered and modified by Rick Henderson
-# Date Created: 20160303
-# Date Modified: 
+# Read JSON
+# Coursera Getting and Cleaning Data
+# Week 2
 
+# Code entered and modified by Rick Henderson.
+# Created: March 10, 2016
+
+# Required libraries
 library(jsonlite)
-# fromJSON returns a Data Frame
 jsonData <- fromJSON("https://api.github.com/users/jtleek/repos")
 names(jsonData)
 
-# Access information about a specific array in the data frame.
-names(jsonData$owner)
+# Which repo do you want the created_at date for?
+quarry_repo <- "datasharing"
 
-jsonData$owner$login
+# Since datasharing is the 8th repo in the list at the time of 
+# this writing, the answer can be retrieved by.
 
-# Example of writing a data frame out as JSON data
-myjson <- toJSON(iris, pretty = TRUE)
-cat(myjson)
+result <- jsonData$created_at[8]
 
-# Convert JSON back to a Data frame
-iris2 <- fromJSON(myjson)
-head(iris2)
+# But how to programmatically determine the 8? Maybe read the 
+# JSON vignette when you have time.
+
+message(paste0("The ", quarry_repo, " was created_at ", result))
+
+
+
