@@ -10,12 +10,12 @@
 - `git log` to show the list of recent commits, newest at the top by default
 - `git status` show the working tree status
 
-# For updating existing Github - update all files
+## For updating existing Github - update all files
 - `git add -A` for adding all files to the index
 - `git commit -m "message"` to commit indexed files to the repository
 - `git push [my url]` will push committed files to GitHub and request username and password
 
-# Pull from Github.com
+## Pull from Github.com
 You can pull files from the Github repository on to your local repository simply by using
 ```
   git pull
