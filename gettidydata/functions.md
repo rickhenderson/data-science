@@ -20,6 +20,9 @@
 * xtabs() -> **Cross Tabs**
 * ftable()
 * object.size(), print(object.size(myData), units="Mb")
+* melt()
+* dcast()
+* tapply()
 
 
 ## Some common usages
@@ -41,6 +44,12 @@ xt <- xtabs(Freq ~ Gender + Admit, data=df)
 
 # Create a flat table from your cross table
 ftable(xt)
+
+# Melt then dcast the dataset, perform mean on variable.
+cylData <- dcast(carMelt, cyl ~ variable, mean)
+
+# Apply the sum function to the count column of using the spray variable.
+tapply(InsectSprays$count, InsectSprays$spray, sum)
 
 ```
 ## Packages Used
