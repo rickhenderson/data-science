@@ -4,17 +4,17 @@
 * sort()
 * order() 
 * arrange()
-    * desc() -> ``` arrange[myData, desc(var1)] ```
+   * desc() -> ` arrange[myData, desc(var1)] `
 * summary()
 * quantile()
 * table()
-   * ``` table(restData$zipCode,useNA="ifany") ```
+   * ` table(restData$zipCode,useNA="ifany") `
 * any()
-   * ``` any(is.na(restData$CouncilDistrict)) ```
+   * ` any(is.na(restData$CouncilDistrict)) `
 * sum()
-   * ``` sum(is.na(restData$CouncilDistrict)) # Yields the count of NAs in the column. ```
+   * ` sum(is.na(restData$CouncilDistrict)) # Yields the count of NAs in the column. `
 * all()
-   * ``` all(restData$zipCode > 0) # Checks all of the zipCode values to see if they are greater than 0 ```
+   * ` all(restData$zipCode > 0) # Checks all of the zipCode values to see if they are greater than 0 `
 * colSums()
 * rowSums()
 * xtabs() -> **Cross Tabs**
@@ -23,7 +23,13 @@
 * melt()
 * dcast()
 * tapply()
-
+* split()
+* lapply()
+* unlist()
+* ddply() - part of `plyr` package.
+* acast()
+* arrange()
+* mutate() - Use `ddply` and `mutate` to add new variables that are summaries of other variables.
 
 ## Some common usages
 ```R
