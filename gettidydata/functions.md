@@ -2,8 +2,9 @@
 *From Getting and Cleaning Data*
 
 * sort()
-* order()
+* order() 
 * arrange()
+* * desc() -> ```R arrange[myData, desc(var1)] ```
 
 
 ## Packages Used
