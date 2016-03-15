@@ -60,5 +60,6 @@ tapply(InsectSprays$count, InsectSprays$spray, sum)
 ```
 ## Packages Used
 * plyr()
-* dplyr()
+* dplyr() - A package designed specifically to work with *properly annotated* **data frames** and run faster due to C++ implementation at a low level. Includes a grammar including the verbs *select, filter, arrange, mutate*. Functions always take a data frame as their first argument and always return a data frame.
+* 
 
