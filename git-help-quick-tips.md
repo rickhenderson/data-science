@@ -14,3 +14,13 @@
 - `git add -A` for adding all files to the index
 - `git commit -m "message"` to commit indexed files to the repository
 - `git push [my url]` will push committed files to GitHub and request username and password
+
+# Pull from Github.com
+You can pull files from the Github repository on to your local repository simply by using
+```
+  git pull
+```
+
+Using GitBash is a great way to have `git` and `python` working well together on a Windows computer.
+
+For *Data Science* or *Data Analysis* you might want to consider using (Anaconda)[https://www.continuum.io/downloads] as this provides over 150 packages plus access to over 200 more relating to analysis and charting.
