@@ -17,7 +17,9 @@
    * ``` all(restData$zipCode > 0) # Checks all of the zipCode values to see if they are greater than 0 ```
 * colSums()
 * rowSums()
-* 
+* xtabs() -> **Cross Tabs**
+* ftable()
+* object.size(), print(object.size(myData), units="Mb")
 
 
 ## Some common usages
@@ -34,6 +36,11 @@ table(restData$zipCode %in% c("21212", "21213")
 # A simple query to show all the restaurants in 2 specific zipcodes (subsetting)
 restData[restData$zipCode %in% c("21212", "21213"), ]
 
+# A crosstab in R on Gender and Admittance
+xt <- xtabs(Freq ~ Gender + Admit, data=df)
+
+# Create a flat table from your cross table
+ftable(xt)
 
 ```
 ## Packages Used
