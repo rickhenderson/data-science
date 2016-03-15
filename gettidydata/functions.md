@@ -32,7 +32,7 @@ all(colSums(is.na(restData) ==0))
 table(restData$zipCode %in% c("21212", "21213")
 
 # A simple query to show all the restaurants in 2 specific zipcodes (subsetting)
-restData[restData$zipCode %in% c("21212", "21213")
+restData[restData$zipCode %in% c("21212", "21213"), ]
 
 
 ```
