@@ -23,4 +23,4 @@ You can pull files from the Github repository on to your local repository simply
 
 Using GitBash is a great way to have `git` and `python` working well together on a Windows computer.
 
-For *Data Science* or *Data Analysis* you might want to consider using (Anaconda)[https://www.continuum.io/downloads] as this provides over 150 packages plus access to over 200 more relating to analysis and charting.
+For *Data Science* or *Data Analysis* you might want to consider using [Anaconda](https://www.continuum.io/downloads) as this provides over 150 packages plus access to over 200 more relating to analysis and charting.
