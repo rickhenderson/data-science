@@ -4,7 +4,7 @@
 * sort()
 * order() 
 * arrange()
-* * desc() -> ```R arrange[myData, desc(var1)] ```
+    * desc() -> ``` arrange[myData, desc(var1)] ```
 
 
 ## Packages Used
