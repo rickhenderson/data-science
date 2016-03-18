@@ -13,3 +13,13 @@ df <- read.csv("data/data.csv")
 ofInterest <- select(df, var1, var2)
 
 ```
+## Filter
+`filter` allows to limit or filter the rows from the data.frame based on some criteria.
+
+```R
+# A simple filter on one variable.
+lowValueRecords <- filter(df, var1 < 100)
+
+# A more complex filter. AND and OR operations are both supported.
+lowIncome <- filter(df, var1 < 10000 & var3 == 6)
+```
