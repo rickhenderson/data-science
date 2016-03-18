@@ -43,5 +43,13 @@ arrange(mydata, desc(var3))
 # Get crazy with it! Sort by multiple columns!
 arrange(mydata, country, desc(cost), bname )
 
+# Use mutate() to create new variables based on the one or more variable.
+ mutate(filelog, size_mb = size / 2^20)
+
+# Also able to use the new created variable to create another within the same command
+newdata <-  mutate(cran3, size_mb = size / 2^20, size_gm = size_mb / 2^10)
+
+# Using summarize() - from SWIRL: "summarize() collapses the dataset to a single row"
+summarize(juiceData, avg_cost = mean(cost))
 
 ```
