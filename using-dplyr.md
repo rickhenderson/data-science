@@ -1,0 +1,47 @@
+# Using `dplyr`
+
+
+```R
+
+mydf <- read.csv(thedata, stringsAsFactors=FALSE)
+dim(mydf)
+head(mydf)
+mydata <- tbl_df(mydf)
+
+# Try showing some data but exclude a range of columns
+select(mydata, -(var4:var2))
+
+# Show just a subset of records - filter!
+filter(mydata, var1="August")
+
+# Use commas to filter on more than 1 criteria at a time
+filter(mydata, var1=="August", var3 > 1000)
+
+# Try ?Comparison to see the binary (relational) operators that R uses.
+?Comparison
+
+# The previous example uses AND to select all the rows where both criteria are true.
+
+# Use | as the operator for OR
+filter(juiceData, country == "US" | country == "CA")
+
+# To see how is.na() works
+is.na(c(3,5,NA,10))
+
+# Change it to those NOT NA
+!is.na(c(3,5,NA,10))
+
+# Using that to filter out the records that are NA for a specified column...showing just good records!
+filter(juiceData, !is.na(country))
+
+# Use arrange() to sort the values based on variables
+arrange(mydata, var3)
+
+# In descending order
+arrange(mydata, desc(var3))
+
+# Get crazy with it! Sort by multiple columns!
+arrange(mydata, country, desc(cost), bname )
+
+
+```
