@@ -60,9 +60,32 @@ summarize(juiceData, avg_cost = mean(cost))
 # Investigate the use of n() and n_distinct().
 data_summary <- summarize(grpd_data, count = n(), unique = n_distinct(country_id), avg_pop = mean(population))
 
+# At this point, we'll use examples directly related to CRAN package download stats
+# from http://cran-logs.rstudio.com/
 # Need to find the top 1% of a set of values (99% quantile)
 quantile(pack_sum$count, probs = 0.99)
 
+# Result is 679 - now find the packages that have more than 679 downloads
+top_counts <- filter(pack_sum, count > 679)
+
+# The following is an RStudio command, so only use it if you are using RStudio.
+View(top_counts)
+
+# Sort the data by using the arrange() function.
+top_counts_sorted <- arrange(top_counts, desc(count))
+
+# Now view the results.
+View(top_counts_sorted)
+
+# Find top 1% of downloads by unique IP addresses
+quantile(pack_sum$unique, probs = 0.99)
+top_unique <- filter(pack_sum, unique > 465)
+top_unique_sorted <- arrange(top_unique, desc(unique))
+
+# Use chaining or piping to find unique countries
+top_countries <- filter(pack_sum, countries > 60)
+# Uses avg_bytes as a tie-breaker between countries with the same count
+result1 <- arrange(top_countries, desc(countries), avg_bytes)
 
 
 ```
