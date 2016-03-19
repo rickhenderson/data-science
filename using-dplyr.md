@@ -83,9 +83,51 @@ top_unique <- filter(pack_sum, unique > 465)
 top_unique_sorted <- arrange(top_unique, desc(unique))
 
 # Use chaining or piping to find unique countries
+# First a quick display of what we are going to accomplish.
 top_countries <- filter(pack_sum, countries > 60)
 # Uses avg_bytes as a tie-breaker between countries with the same count
 result1 <- arrange(top_countries, desc(countries), avg_bytes)
 
+# A pretty BAD example of chaining.
+result2 <-
+  arrange(
+    filter(
+      summarize(
+        group_by(cran,
+                 package
+        ),
+        count = n(),
+        unique = n_distinct(ip_id),
+        countries = n_distinct(country),
+        avg_bytes = mean(size)
+      ),
+      countries > 60
+    ),
+    desc(countries),
+    avg_bytes
+  )
+ 
+# A more concise technique that uses less variables so intermediate steps aren't saved.
+result3 <-
+  cran %>%
+  group_by(package) %>%
+  summarize(count = n(),
+            unique = n_distinct(ip_id),
+            countries = n_distinct(country),
+            avg_bytes = mean(size)
+  ) %>%
+  filter(countries > 60) %>%
+  arrange(desc(countries), avg_bytes)
 
+# A basic chain
+cran %>%
+  select(ip_id, country, package, size) 
+
+# And a bit more:
+cran %>%
+  select(ip_id, country, package, size) %>%
+  mutate(size_mb = size / 2^20) %>%
+    print
+
+ 
 ```
