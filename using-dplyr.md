@@ -53,3 +53,16 @@ newdata <-  mutate(cran3, size_mb = size / 2^20, size_gm = size_mb / 2^10)
 summarize(juiceData, avg_cost = mean(cost))
 
 ```
+## Using dplyr Part 2
+
+*TODO add some stuff from swirl lesson 2 here....including group_by()*
+```R
+# Investigate the use of n() and n_distinct().
+data_summary <- summarize(grpd_data, count = n(), unique = n_distinct(country_id), avg_pop = mean(population))
+
+# Need to find the top 1% of a set of values (99% quantile)
+quantile(pack_sum$count, probs = 0.99)
+
+
+
+```
