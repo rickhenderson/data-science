@@ -70,6 +70,25 @@
 - Sys.time()
 - strptime()
 - length()
+- tolower()
+- toupper()
+- strsplit()
+- sub()    # Only applies one replacement.
+- gsub()   # Apply character replacement to all occurrences.
+- grep()
+- grepl()  # Use with table(grepl(...)) for displaying vector
+```R
+# Search for a value in a variable:
+```
+- length(grep("RickStreet", mapdata$intersection))
+```R
+library(stringr)
+```
+- nchar("RickHenderson")
+- substr("Rick Henderson", 1, 4)
+- paste()
+- paste0()
+- str_trim()
 
 ###Reading Files
 ```R
