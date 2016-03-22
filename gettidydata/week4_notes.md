@@ -41,16 +41,58 @@ Literals are the simplest pattern to match. Like the word 'kungfu'.
 ## Metacharacters
 Metacharacters are used as grammar, or modifiers for simple literals in a pattern.
 
-```
+```R
 ^i think      # matches the beginning of a line
 ```
 Matches all the examples where the words "i think" starts the line of the file.
 
-```
+```R
 morning$     # matches text at end of a line
 ```
-
-```
+```R
 [Bb][Uu][Ss][Hh] # Matches a set of characters in the list
 ```
+```R
+^[Ii] am     # matches I am or i am at the beginning of a line
+```
+```R
+^[0-9][a-zA-Z]     # matches any line that starts with a number followed by a letter
+```
+When used inside a character list, the **^** symbol means **NOT**.
+```R
+[^?.]$            # matches lines that don't end in ? or .
+```
 
+### More about Regular Expressions
+```R
+9.11              # matches 9, any character, then 11. Use \. to match periods.
+```
+```R
+right|wrong       # | acts as an OR operator
+```
+```R
+# Can also use expressions in the OR operator
+^[Gg]ood|[Bb]ad   # Matches Good at the beginning or Bad anywhere in the line
+
+# To Match Good or Bad at the beginning, regardless of case:
+^([Gg]ood|[Bb]ad)
+```
+
+```R
+# Use ? for optional matches
+[Mm]ichael( [Jj]\.)? [Ff]ox
+# will match lines containing Michael J. Fox or michael fox
+```
+
+Use \* and + for repetition. __*__ means any number including 0.
+__+__ means at least one of them (characters).
+
+```R
+(.*)           # Matches any line containing 0 or more characters between parenthese like (how's this) or ()
+```
+
+Use {} to indicate the min and max number of occurences.
+```R
+[Tt]rudeau( +[^ ]+ +){1,5} debate
+# Looks for any pattern of Trudeau followed by spaces and 1 - 5 words then the word debate.
+```
