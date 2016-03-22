@@ -96,3 +96,39 @@ Use {} to indicate the min and max number of occurences.
 [Tt]rudeau( +[^ ]+ +){1,5} debate
 # Looks for any pattern of Trudeau followed by spaces and 1 - 5 words then the word debate.
 ```
+## Working With Dates
+
+```R
+d1 <- date() # Returns date and time, returns a character object.
+d2 <- Sys.date() # Not include time, returns a date object
+
+format(d2, "%a %b %d")  # See other notes for use of date formatting characters
+x <- c("1jan1960", "2jan1960", "31mar1960")
+z <- as.Date(x, "%d%b%Y")
+z
+z[1] - z[2]
+as.numeric(z[1] - z[2])
+
+weekdays(d2)
+months(d2)
+julian(d2)
+```
+Use the `lubridate` library to help make things easier.
+
+```R
+library(lubridate)
+# These functions will output a UTC date format.
+ymd("20140108")
+mdy("08/04/2013")
+dmy("03-04-2014")
+
+ymd_hms("2012-08-03 10:30:32")
+ymd_hms("2012-08-03 10:30:32", tz="Pacific/Auckland")
+?Sys.timezone
+# See the r-statistics.com tutorial on lubridate.
+
+# Get the weekday using lubridate.
+wday(d1, label=TRUE) # To get the weekday abbreviation. Otherwise it returns an integer.
+
+```
+For good, clean, tidy, data you want your dates to be of the `Date` class or `POSIXct` or `POSIXlt`.
