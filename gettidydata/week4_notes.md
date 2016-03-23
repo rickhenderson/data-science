@@ -10,6 +10,8 @@ strsplit()
 sapply()
 sub()    # Only applies one replacement.
 gsub()   # Apply character replacement to all occurrences.
+# Great example: remove commas from currency values
+noCommas <- as.numeric(gsub(",", "", gdp$gross))  
 grep()
 grepl()  # Use with table(grepl(...)) for displaying vector
 # Search for a value in a variable:
