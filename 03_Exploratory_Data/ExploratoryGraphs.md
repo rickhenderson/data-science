@@ -21,5 +21,26 @@ summary(pollution$ppm25)
 ```
 * Boxplot
 ```R
-boxplot(pollution$ppm2, col = "blue")
+boxplot(pollution$ppm25, col = "blue")
+
+# Overlaying features
+boxplot(pollution$ppm25, col = "blue")
+abline(h = 12)
+```
+* Histogram
+```R
+histogram(pollution$ppm25, col = "green")
+rug(pollution$ppm25)
+
+histogram(pollution$ppm25, col = "green", breaks = 100)
+rug(pollution$ppm25)
+
+# Overlaying features
+hist(pollution$pm25, col = "green")
+abline(v = 12, lwd = 2)
+abline(v = median(pollution$pm25), col = "magenta", lwd = 4)
+```
+* Barplot
+```R
+barplot(table(pollution$region), col = "wheat", main = "Number of Counties in Each Region")
 ```
