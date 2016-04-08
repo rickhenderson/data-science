@@ -44,3 +44,13 @@ abline(v = median(pollution$pm25), col = "magenta", lwd = 4)
 ```R
 barplot(table(pollution$region), col = "wheat", main = "Number of Counties in Each Region")
 ```
+## Two Dimensional Plots
+* Multiple / overlayed 1-D plots (Lattice / ggplot2)
+* Scatterplots
+* Smooth Scatterplots
+
+## More than 2 Dimensions
+* Overlayed, multiple 2-D plots, coplots
+* Use color, size, and shape to add dimensions
+* Spinning plots, or 3-D plots but 3D not that useful
+
