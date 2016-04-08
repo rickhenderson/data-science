@@ -54,3 +54,7 @@ barplot(table(pollution$region), col = "wheat", main = "Number of Counties in Ea
 * Use color, size, and shape to add dimensions
 * Spinning plots, or 3-D plots but 3D not that useful
 
+```R
+with(pollution, plot(lattitude, pm25, col = region))
+abline(h = 12, lwd = 2, lty = 2)
+```
