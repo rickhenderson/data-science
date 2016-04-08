@@ -14,7 +14,7 @@ library(datasets)
 data(cars)
 with(cars, plot(speed, dist, main="Stopping Distance of Cars c. 1920"))
 ```
-[[http://i.imgur.com/GYsDSwM.png]]
+[http://i.imgur.com/GYsDSwM.png]
 
 # Lattice Plotting Examples
 * Uses a different approach - plots are created with a single function call such as `xyplot`, `bwplot`, etc.
@@ -23,4 +23,11 @@ with(cars, plot(speed, dist, main="Stopping Distance of Cars c. 1920"))
 * Margins and spacing taken care of automatically.
 * Also called panel plots, and allows multiple variables.
 * Need to specify a lot of information in each function call.
-* 
+* Annotating is not as intuitive, and you can't add to the plot once it's completed. You need to change the function call.
+
+```R
+library(lattice)
+state <- data.frame(state.x77, region = state.region)
+xyplot(Life.Exp ~ Income | region, data = state, layout = c(4, 1))
+```
+[http://i.imgur.com/vkFaGA7.png]
