@@ -14,3 +14,4 @@ library(datasets)
 data(cars)
 with(cars, plot(speed, dist, main="Stopping Distance of cars c. 1920"))
 ```
+[[https://www.flickr.com/gp/designtypegeek/23kC37]]
