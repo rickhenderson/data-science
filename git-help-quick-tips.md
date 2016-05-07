@@ -1,5 +1,6 @@
 #Git Quick Sheet
 
+## Files Created on your computer, and you want them on GitHub
 - After creating your directory, use `git init` to initialize the folder as a local repository
 - Finish working on a file in your local repository
 - `git remote add origin https://github.com/rickhenderson/rover.git` for new repository (empty on GitHub, but files on comp)
@@ -20,6 +21,16 @@ You can pull files from the Github repository on to your local repository simply
 ```
   git pull
 ```
+
+## Files already in a Repo on GitHub but not on your computer yet.
+This operation is called `clone`.
+
+* For Windows, you could be using *GitHub for Windows*.
+* Linux:
+  * Open the terminal, you don't have to create the folder that will contain the repo, but you need to be in the folder where it will be stored.
+  * Use `git clone http://github.com/url_you_want`
+  * And that should work.
+  * More details: https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository
 
 Using GitBash is a great way to have `git` and `python` working well together on a Windows computer.
 
