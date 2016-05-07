@@ -35,3 +35,8 @@ This operation is called `clone`.
 Using GitBash is a great way to have `git` and `python` working well together on a Windows computer.
 
 For *Data Science* or *Data Analysis* you might want to consider using [Anaconda](https://www.continuum.io/downloads) as this provides over 150 packages plus access to over 200 more relating to analysis and charting.
+
+### Using Git with Eclipse
+* Install Git using `Help > Install New Software` and use http://download.eclipse.org/egit/updates as the source.
+* Import a local Git repository by using `File > Import` and select Git.
+  * Might be a problem: Try importing as general project.
