@@ -25,7 +25,7 @@ You can pull files from the Github repository on to your local repository simply
 ## Files already in a Repo on GitHub but not on your computer yet.
 This operation is called `clone`.
 
-* For Windows, you could be using *GitHub for Windows*.
+* For Windows, you could be using *GitHub for Windows*, or you could run git from the command prompt or use GitBash.
 * Linux:
   * Open the terminal, you don't have to create the folder that will contain the repo, but you need to be in the folder where it will be stored.
   * Use `git clone http://github.com/url_you_want`
