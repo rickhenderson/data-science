@@ -15,7 +15,7 @@
 ## For updating existing Github - update all files
 - `git add -A` for adding all files to the index
 - `git commit -m "message"` to commit indexed files to the repository
-- `git push [my url]` will push committed files to GitHub and request username and password
+- `git push` will push committed files to GitHub and request username and password
 
 ## Pull from Github.com
 You can pull files from the Github repository on to your local repository simply by using
