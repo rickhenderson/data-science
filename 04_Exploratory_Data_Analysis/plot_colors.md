@@ -1,5 +1,5 @@
 # Plot Colors
-Source: (https://www.coursera.org/learn/exploratory-data-analysis/home/week/3)[Exploratory Data Analysis Week 3]
+Source: <a href="https://www.coursera.org/learn/exploratory-data-analysis/home/week/3">Exploratory Data Analysis Week 3</a>
 
 * colors() - returns a list of the colour names that are available
 * colorRamp() - returns a list of values in [0, 1] that __interpolate___ between a set of colors
