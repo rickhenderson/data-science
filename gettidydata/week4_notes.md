@@ -98,6 +98,18 @@ Use {} to indicate the min and max number of occurences.
 [Tt]rudeau( +[^ ]+ +){1,5} debate
 # Looks for any pattern of Trudeau followed by spaces and 1 - 5 words then the word debate.
 ```
+Find matches of a word repeated twice, using \1 and \2 etc to *remember* a pattern.
+```R
+ +([a-zA-Z]+) +\1 +
+```
+The \* is greedy.
+```R
+# Match strings that start and end with s. Find longest.
+^s(.*)s$
+
+# Find a shorter substring
+^s(.*?)s$
+```
 ## Working With Dates
 
 ```R
