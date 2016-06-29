@@ -24,6 +24,11 @@ paste()
 paste0()
 str_trim()
 
+library(lubridate)
+ymd()
+mdy()
+dmy()
+wday()
 ```
 ## Variable names and text data in datasets
 Variables names should be:
