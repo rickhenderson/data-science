@@ -97,6 +97,10 @@ Use {} to indicate the min and max number of occurences.
 ```R
 [Tt]rudeau( +[^ ]+ +){1,5} debate
 # Looks for any pattern of Trudeau followed by spaces and 1 - 5 words then the word debate.
+
+{m,n} - at least m but not more than n matches
+{m} - exactly m matches
+{m,} - at least m matches
 ```
 Find matches of a word repeated twice, using \1 and \2 etc to *remember* a pattern.
 ```R
