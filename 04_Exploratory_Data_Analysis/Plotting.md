@@ -1,7 +1,7 @@
 # Plotting
 There are 3 different plotting systems in R:
 * The Base system
-  * Uses an artists blank pallete with the `plot` function and builds up from there.
+  * Uses an artist's blank pallete with the `plot` function and builds up from there.
   * Uses `text, lines, points`, and `axis` as annotation functions.
   * Generate, then Annotate.
 * Lattice
@@ -33,7 +33,7 @@ library(lattice)
 state <- data.frame(state.x77, region = state.region)
 xyplot(Life.Exp ~ Income | region, data = state, layout = c(4, 1))
 ```
-<img src="http://i.imgur.com/vkFaGA7.png>
+<img src="http://i.imgur.com/vkFaGA7.png">
 [http://i.imgur.com/vkFaGA7.png]
 
 # ggplot2 Plotting Examples
