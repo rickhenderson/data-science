@@ -42,3 +42,4 @@ data(mpg)
 qplot(displ, hwy, data = mpg)
 ```
 [http://i.imgur.com/cdayeoR.png]
+<img src="http://i.imgur.com/cdayeoR.png">
