@@ -4,6 +4,7 @@ Source: <a href="https://www.coursera.org/learn/exploratory-data-analysis/home/w
 * colors() - returns a list of the colour names that are available
 * colorRamp() - returns a list of values in [0, 1] that __interpolate___ between a set of colors
 * colorRampPalette() - returns a list of colors in Hex format
+* RColorBrewer() - package that provides other colours
 ```R
 > pal <- colorRamp(c("red", "blue"))
 > pal(0)
