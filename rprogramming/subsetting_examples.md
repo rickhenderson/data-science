@@ -26,8 +26,16 @@ Here is a brief description of how this can be handled:
 # 2. Convert it using strptime
 # d1 = strptime(d1, "%d/%m/%Y %H:%M:%S")
 ```
+But this **actually** worked:
+```R
+# Or simply converting all the dates, then do filtering
+df$Date <- as.Date(df$Date,format="%d/%m/%Y")
 
-From <a href="week1.md">:
+# R subsetting on the proper dates. Using OR, not AND.
+jan2007 <- df[df$Date == as.Date("2007-01-01") | df$Date == as.Date("2007-01-02")]
+```
+
+From ["week1.md"]:
 
 ## Subsetting
 Subsetting can be used to get subsets of objects in R.
