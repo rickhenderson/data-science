@@ -13,4 +13,6 @@
 
 * it can be useful to check out both linkage calculations to see which works best for your purpose
 * Tutorial on heatmaps:  http://sebastianraschka.com/Articles/heatmaps_in_r.html#clustering
-* 
+* Once you choose a distance algorithm and linkage type, hierarchical clustering is __deterministic__
+
+## K-Means Clustering
