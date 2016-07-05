@@ -77,6 +77,7 @@
 - gsub()   # Apply character replacement to all occurrences.
 - grep()
 - grepl()  # Use with table(grepl(...)) for displaying vector
+- dist(df) # Generate distances for clustering
 ```R
 # Search for a value in a variable:
 ```
