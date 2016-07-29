@@ -27,6 +27,14 @@ with(cars, plot(speed, dist, main="Stopping Distance of Cars c. 1920"))
 
 [http://i.imgur.com/GYsDSwM.png]
 
+A Histogram:
+```R
+df <- mtcars
+hist(df$disp, xlim=range(0,550), ylim =range(0,8), xlab="Displacement", ylab="Frequency", main="Engine Displacement in mtcars", col="cyan")
+```
+<img src="http://i.imgur.com/PBXDJhq.png">
+[http://i.imgur.com/PBXDJhq.png]
+
 # Lattice Plotting Examples
 
 ```R
