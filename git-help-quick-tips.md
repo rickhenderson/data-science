@@ -1,4 +1,4 @@
-#Git Quick Sheet
+# Git Quick Sheet
 
 ## Files Created on your computer, and you want them on GitHub
 - After creating your directory, use `git init` to initialize the folder as a local repository
