@@ -1,7 +1,7 @@
 # Week 3 R Programming
 ## Looping using *apply
 
-###lapply()
+### lapply()
 `lapply()` takes an object and a function as arguments, and evaluates the function on every element in the object.
 The `lapply()` function __always__ returns a list.
 
