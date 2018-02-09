@@ -1,4 +1,4 @@
-#Week 3 R Programming
+# Week 3 R Programming
 ## Looping using *apply
 
 ###lapply()
@@ -85,6 +85,4 @@ Not covered in the course but probably you'll probably try to use them:
      }
 ```
 Can also use the `switch()` function.
-
-
 
