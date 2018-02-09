@@ -1,4 +1,4 @@
-#Debugging in R
+# Debugging in R
 
 ## traceback()
 `traceback()` displays the function where the error occured. Typically used on the command
