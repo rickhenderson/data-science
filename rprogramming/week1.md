@@ -1,11 +1,10 @@
-#R Programming
-#Week 1
+# R Programming Week 1
 
 * vectors (arrays)
 * lists (dictionaries)
 * print(x) and auto print 
 
-##Declaring variables
+## Declaring variables
 ```R
 x <- 3
 x <- 1:10
@@ -34,7 +33,7 @@ The `c()` function is used to create vectors (concatenate, create)
 > x <- list(1, "a", TRUE, 1+4i)
 ```
 
-###Matricies
+### Matricies
 * Just a vector with dimensions
 ```R
 > m <- matrix(nrow = 2, ncol = 3)
@@ -58,7 +57,7 @@ Built column wise:
 >rbind(x,y) (see different results)
 ```
 
-##Factors
+## Factors
 * Used for categorical data. Thought of as a vector of integers where each integer has a label.
 * x <- factor(c("yes", "yes", "no", "yes", "no")
 * table(x)
@@ -68,12 +67,12 @@ Built column wise:
 * x
 *** This is important in linear modelling
 
-##Missing Values
+## Missing Values
 * Uses NA or NaN
 * is.na() or is.nan()
 * NA values have a class, but NaN does not.
 
-##Data Frames
+## Data Frames
 
 A Data Frame is a key __data type__ in R used to store tabular data.
 
@@ -103,16 +102,14 @@ Names can be useful for creating _self-describing_ data.
 
 ## Reading Files
 There are a number of functions used to read data from files and techniques to handle very large 
-
 files. Be sure to calculate the amount of RAM required to read in the datafile and check that your 
-
 computer has at least DOUBLE that amount before starting.
 - See other list of functions or make more notes later. -rh-
 
 ## Subsetting
 Subsetting can be used to get subsets of objects in R.
-- _[_ returns an object of the same class, can be used to select more than one element
-- _[[_ extracts elements of a list or dataframe
+* \[ returns an object of the same class, can be used to select more than one element
+* \[\[ extracts elements of a list or dataframe
 - _$_ extracts elements of a list or dataframe by name
 - Subsets can be created using logical index as well as numeric indexes
   - `>x[x > "a"]`
@@ -144,7 +141,7 @@ Subsetting can be used to get subsets of objects in R.
 * All _EXCEPT_ 2nd and 10th elements: `x[c(-2, -10)]` or `x[-c(2, 10)]`
 *  
 
-###Practical Example
+### Practical Example
 Read in a file called __data.csv__ and find the average of the Ozone column.
 ```R
 d <- read.csv(data.csv) # Uses comma separator by default. d is now a dataframe.
@@ -188,14 +185,14 @@ max(d$Ozone[d$Month == 5], na.rm = TRUE)
 
 ```
 
-- Double bracket [[ operator can be used with computed element names as shown above.
+* Double bracket \[\[ operator can be used with computed element names as shown above.
 
 ### Subsetting Matricies
 
 ### Partial Matches
-Subsetting with partial matches can save a lot of typing. Works with **[[** and **$**.
-- `x <- list(aardvark = 1:5)`
-- `x$a`
+Subsetting with partial matches can save a lot of typing. Works with **\[\[** and **$**.
+* `x <- list(aardvark = 1:5)`
+* `x$a`
 
 
 ### Removing Missing Values
