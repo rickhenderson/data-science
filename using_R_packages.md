@@ -1,4 +1,4 @@
-##Installing R Packages
+## Installing R Packages
 You can get a list of the available packages by using:
 
     a = available.packages()
