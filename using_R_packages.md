@@ -14,7 +14,7 @@ Or multiple packages using a Character vector
 
 Or from R Studio using _Tools > Install Packages_
 
-###Installing an R Package from Bioconductor
+### Installing an R Package from Bioconductor
     Source("http://bioconductor.org/biocLite.R")
     biocLite()
     biocLite(c("GenomicFeatures", "AnnotationDbi"))
