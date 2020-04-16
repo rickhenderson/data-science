@@ -5,7 +5,7 @@
 
 # Generate some Random data
 x <- rnorm(100)
-y = rnorm(100, mean = 5)
+y <- rnorm(100, mean = 5)
 
 
 # Generate a simple scatterplot
