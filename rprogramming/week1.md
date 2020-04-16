@@ -20,7 +20,7 @@ The `c()` function is used to create vectors (concatenate, create)
 > x <- c(0.5, 0.6)
 > x <- c("a", "b", "c")
 ```
-###Using the `vector()` function
+### Using the `vector()` function
 ```R
 > x <- vector("numeric", length = 10)
 > class(x)
