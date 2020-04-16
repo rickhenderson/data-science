@@ -17,8 +17,8 @@ x <- rnorm(4)
 
 The `c()` function is used to create vectors (concatenate, create)
 ```R
-> x <- c(0.5, 0.6)
-> x <- c("a", "b", "c")
+x <- c(0.5, 0.6)
+x <- c("a", "b", "c")
 ```
 ### Using the `vector()` function
 ```R
@@ -30,7 +30,7 @@ The `c()` function is used to create vectors (concatenate, create)
 ```
 ** None of the AS() operators changes x, just displays it.
 ```R
-> x <- list(1, "a", TRUE, 1+4i)
+x <- list(1, "a", TRUE, 1+4i)
 ```
 
 ### Matricies
