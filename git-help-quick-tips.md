@@ -7,7 +7,7 @@
 - `git add -A` for adding all files to the index
 - `git commit -m "message"` to commit indexed files to the repository
 - `git commit -m "message" filename` to commit a single file
-- `git push -u origin master`
+- `git push -u origin main`
 - `git push [my url]` will push committed files to GitHub.
 - `git log` to show the list of recent commits, newest at the top by default
 - `git status` show the working tree status
